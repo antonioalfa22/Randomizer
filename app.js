@@ -1,7 +1,7 @@
 const axios = require("axios")
 
 const addr = "http://localhost:8081"
-const interval = 50 * 1000
+const interval = 43200
 
 function randomFloat(low, high) {
     return Math.random() * (high - low) + low
