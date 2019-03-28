@@ -17,8 +17,8 @@ function newDate() {
 function sendData() {
     const data = {
         device: "asturias_device",
-        temperature: randomInt(-10, 50),
-        hour: newDate(),
+        temperature: randomInt(-10, 50).toString(),
+        hour: newDate().toString(),
         gps: randomFloat(-90, 90).toString()+";"+randomFloat(-90, 90).toString()
     }
     axios.post(addr+"/api/dato", data).then(function(res){
