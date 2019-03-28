@@ -16,7 +16,7 @@ function newDate() {
 
 function sendData() {
     const data = {
-        device: "brasil_device",
+        device: "chicago_device",
         temperature: randomInt(-10, 50).toString(),
         hour: newDate().toString(),
         gps: randomFloat(-90, 90).toString()+";"+randomFloat(-90, 90).toString()
