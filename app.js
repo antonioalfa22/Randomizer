@@ -19,7 +19,7 @@ function sendData() {
         device: "chicago_device",
         temperature: randomInt(-10, 50).toString(),
         hour: newDate().toString(),
-        gps: randomFloat(-90, 90).toString()+";"+randomFloat(-90, 90).toString()
+        gps: "41.881519;-87.628458"
     }
     axios.post(addr+"/api/dato", data).then(function(res){
         console.log(res)
