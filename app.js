@@ -6,6 +6,7 @@ const interval = 43200000
 function randomFloat(low, high) {
     return Math.random() * (high - low) + low
 }
+
 function randomInt(low, high) {
     return Math.floor(Math.random() * (high - low) + low)
 }
@@ -17,11 +18,11 @@ function newDate() {
 function sendData() {
     const data = {
         device: "chicago_device",
-        temperature: randomInt(-10, 50).toString(),
+        temperature: randomInt(16, 28).toString(),
         hour: newDate().toString(),
         gps: "41.881519;-87.628458"
     }
-    axios.post(addr+"/api/dato", data).then(function(res){
+    axios.post(addr + "/api/dato", data).then(function(res) {
         console.log(res)
     }).catch(err => {
         console.log(err)
